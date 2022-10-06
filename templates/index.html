@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Engisol-Jobber</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: pink;">
+	<div style="background-color: white; color: rgb(236, 10, 187);">
+		<marquee behavior="" direction="left">
+			<h3>welcome once again to engisol-jobber, a friendly site to help you get images from any sites</h3></marquee></div><br>
+	<div class="container">
+	<div class="card" style="border-radius: 15px;">
+		<h3 style="color: rgb(236, 10, 187); text-align: center; font-size: 20px;">Pls input any websites link of your choice and we'll process thier images to you in few seconds, thank you!</h3>
+	</div>	<br>	
+	<form method="post">
+		{% csrf_token %}
+		<input type="text" name="your_url" class="form-control active-pink-3 active-pink-4 mb-4">
+		<input type="submit" name="" class="btn btn-primary">
+	</form>
+	<hr>
+	<div class="card">
+		<p class="card-text">Kindly visit our news page for latest info!</p>
+		<a href="/news" class="btn btn-primary">Access Now!..</a>
+	</div><hr>
+	<div class="card">
+		<p class="card-text">Kindly apply for jobs and get hired! at our Job platform</p>
+		<a href="/jobs" class="btn btn-success">Access Now!..</a>
+	</div>
+</div>
+{% for i in value %}
+   <img src="{{i}}">
+{% endfor %}
+
+<script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Engisol-News-Aggregator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: pink;">
+    <div style="background-color: white; color: rgb(236, 10, 187);">
+		<marquee behavior="" direction="left">
+			<h3>welcome once again to engisol-jobber, a friendly site to help you get news accross the globe</h3></marquee></div><br>
+    <div class="container">
+    <div class="jumbotron" style="background-color: white;">
+        <center><h1 style="color: rgb(236, 10, 187);">HackersEngisol News Aggregator</h1>
+           <a href="/news" class="btn btn-primary">Refresh News</a>
+        </form>
+    </center>
+    </div>
+</div><br>
+
+   <div class="container">
+    <div class="card">
+		<p class="card-text">Get exclusive images from any sites with just a click of the websites link!!</p>
+		<a href="/" class="btn btn-primary">Access Now!..</a>
+	</div><hr>
+	<div class="card">
+		<p class="card-text">Kindly apply for jobs and get hired! at our Job platform</p>
+		<a href="/jobs" class="btn btn-success">Access Now!..</a>
+	</div>
+   </div><br>
+    <div class="container">
+            
+            <div class="center">
+                   <div class="container">
+                    <div class="card" >
+                    <h3 class="text-centre" style="color: rgb(236, 10, 187);"> Get exclusive news through Engisol</h3>
+                </div>
+                </div><br><br>
+                <div class="container">
+                    {% for links,toi_news in data %}
+                    <div class="card">
+                    <h5 style="color: rgb(236, 10, 187);"> -  {{toi_news}} </h5>
+                    <a href="https://timesofindia.indiatimes.com/briefs" class="btn btn-primary">Read More!...</a>
+                </div>
+                    <hr>
+                    {% endfor %}
+                </div>
+                    <br>
+           </div>
+</div>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

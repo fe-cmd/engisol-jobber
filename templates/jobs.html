@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engisol-Jobber</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: pink;">
+<div style="background-color: white; color: rgb(236, 10, 187);">
+<marquee behavior="" direction="left">
+    <h3>welcome once again to engisol-jobber, a friendly site to provide you job opportunities</h3></marquee></div>
+<div class="container" style="margin-top: 50px;">
+ <div class="card">
+    <h2 style="text-align: center; color: rgb(236, 10, 187);">Hello, Search for your exclusive Jobs here...</h2>  
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="active-pink-3 active-pink-4 mb-4">
+            <input name="title" class="form-control" type="text" placeholder="Enter Job title" aria-label="Search">
+          </div>
+          <!-- Search form -->
+          <div class="active-purple-3 active-purple-4 mb-4">
+            <input name="location" class="form-control" type="text" placeholder="Enter Location" aria-label="Search">
+          </div>
+          <button class="btn btn-success" type="submit">Search</button>
+    </form>
+ </div><br>
+ <div class="card">
+    <p class="card-text">Kindly visit our news page for latest info!</p>
+    <a href="/news" class="btn btn-primary">Access Now!..</a>
+</div><hr>
+<div class="card">
+    <p class="card-text">Get exclusive images from any sites with just a click of the websites link!!</p>
+    <a href="/" class="btn btn-success">Access Now!..</a>
+</div>
+ </div><br><br>
+ <div class="container">
+    <div class="card" id="card-python-for-beginners">
+        <div class="card-header" style="background-color: rgb(0, 132, 255); color: white;">
+            Python
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Python for beginners</h5>
+            <p class="card-text">if you are new to Python, this is for you</p>
+            <a href="#" class="btn btn-primary">Start for $20</a>
+        </div>
+    </div>  <br>
+    <div class="card" id="card-python-web-development">
+        <div class="card-header" style="background-color: rgb(0, 132, 255); color: white;">
+            Python
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Python Web Development</h5>
+            <p class="card-text">if you feel enough confident with beginning, this is for you</p>
+            <a href="#" class="btn btn-primary">Start for $50</a>
+        </div>
+    </div><br>
+    <div class="card" id="card-python-machine-learning">
+        <div class="card-header" style="background-color: rgb(0, 132, 255); color: white;">
+            Python
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Python Machine Learning</h5>
+            <p class="card-text">Become a Python Machine Learning</p>
+            <a href="#" class="btn btn-primary">Start for $100</a>
+        </div>
+    </div><br>
+</div>
+    <br><br>
+
+    <div class="container">
+    <h3 class="card" style="border-radius: 10px; color: rgb(236, 10, 187);;">Job results!!!</h3>
+    <hr>
+    <h2 class="card" style="border-radius: 15px; color: red;">{{message}}</h2>
+
+    <hr>
+  {% if data %}
+  <h3>Job Search results for {{title}}</h3>
+    {% for company,date,skill,link in data  %}
+    <div class="card" id="card-python-machine-learning">
+        <div class="card-header" style="background-color: rgb(0, 132, 255); color: white;">
+            {{title}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Company Name: {{company}}</h5>
+            <p class="card-text">Required Skills: {{skill}}</p>
+            <p class="card-text text-sm">date_posted: {{date}}</p>
+            <a href="{{link}}" class="btn btn-primary">Apply Now!..</a>
+        </div>
+    </div><br>
+
+    {% endfor %}
+  {% endif %}
+    </div>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
