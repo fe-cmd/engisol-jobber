@@ -25,9 +25,7 @@ load_dotenv(dotenv_path)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://engisol-jobber-production.up.railway.app/'
-],
+CSRF_TRUSTED_ORIGINS = ['https://engisol-jobber-production.up.railway.app/']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
